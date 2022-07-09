@@ -4,10 +4,17 @@ import 'package:flutter/material.dart';
 bool isDarkTheme = false;
 
 class AppColors {
+  // App Colors
+  static const Color mainColor = Color(0xFF253085);
+
+  static Color menuGradientTop = parseColor('#46579F');
+  static Color menuGradientBottom = parseColor('#8393D4');
+
   // Classic Colors
   static const Color black = Colors.black;
   static const Color white = Colors.white;
   static const Color transparent = Colors.transparent;
+  static const Color red = Colors.red;
 
   static Color parseColor(String color) {
     String hex = color.replaceAll("#", "");

@@ -1,21 +1,11 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:guven_future/Utilities/AppColors.dart';
+import 'package:wiet_corp/utilities/app_colors.dart';
 
-class CustomDrawer extends StatefulWidget {
+class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
     Key? key,
   }) : super(key: key);
-
-  @override
-  _CustomDrawerState createState() => _CustomDrawerState();
-}
-
-class _CustomDrawerState extends State<CustomDrawer> {
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,16 +50,16 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     children: [
                       Container(
                         width: 100,
-                        child: const CircleAvatar(
-                          radius: 50,
-                          backgroundImage: ExactAssetImage('assets/user.jpg'),
-                        ),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
                             color: Colors.white70,
                             width: 4.0,
                           ),
+                        ),
+                        child: const CircleAvatar(
+                          radius: 50,
+                          backgroundImage: ExactAssetImage('assets/user.jpg'),
                         ),
                       ),
                       const SizedBox(width: 25),
@@ -110,7 +100,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   color: Colors.white,
                 ),
                 title: const Text(
-                  'Profil',
+                  'Profile',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -126,7 +116,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     color: Colors.white,
                   ),
                   title: const Text(
-                    'Bildirimler',
+                    'Notification',
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -145,7 +135,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     color: Colors.white,
                   ),
                   title: const Text(
-                    'Ayarlar',
+                    'Settings',
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -162,7 +152,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 color: Colors.white,
               ),
               title: const Text(
-                'Geri Dönüş',
+                'Go Back',
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -177,7 +167,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 color: Colors.white,
               ),
               title: const Text(
-                'Güvenli Çıkış',
+                'Logout',
                 style: TextStyle(
                   color: Colors.white,
                 ),

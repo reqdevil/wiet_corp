@@ -1,5 +1,8 @@
 import 'package:wiet_corp/models/weight.dart';
 
+List<Breed> breedFromJson(List<dynamic> json) =>
+    List<Breed>.from(json.map((x) => Breed.fromJson(x)));
+
 class Breed {
   Breed({
     this.weight,

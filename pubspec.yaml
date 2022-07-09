@@ -45,6 +45,10 @@ dependencies:
   # HTTP Package
   dio: ^4.0.6
 
+  # Masonry Layout
+  flutter_staggered_grid_view: ^0.6.1
+  transparent_image: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -71,6 +75,8 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+      - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

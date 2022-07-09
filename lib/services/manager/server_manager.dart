@@ -13,7 +13,6 @@ class ServerManager<T> implements BaseServerManager {
 
   @override
   Future<ListResponse<T>> getData({
-    required Map<String, dynamic> params,
     required Function(List<dynamic>) parseFunction,
   }) async {
     try {
@@ -25,6 +24,7 @@ class ServerManager<T> implements BaseServerManager {
 
       return data;
     } on Exception catch (e) {
+      print(e);
       rethrow;
     }
   }

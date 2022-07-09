@@ -13,6 +13,16 @@ class ImageInitial extends ImageState {}
 
 class ImageLoading extends ImageState {}
 
-class ImageLoaded extends ImageState {}
+class ImageLoaded extends ImageState {
+  final List<Cat> catList;
 
-class ImageError extends ImageState {}
+  ImageLoaded({
+    required this.catList,
+  });
+}
+
+class ImageError extends ImageState {
+  final Exception e;
+
+  ImageError(this.e);
+}

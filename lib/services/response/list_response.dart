@@ -14,11 +14,9 @@ class ListResponse<T> {
     Response response,
     Function create,
   ) {
-    Map<String, dynamic> json = jsonDecode(response.toString());
-
     return ListResponse<T>(
       statusCode: response.statusCode!,
-      data: response.statusCode == 200 ? create(json["breeds"]) : null,
+      data: response.statusCode == 200 ? create(response.data) : null,
     );
   }
 }

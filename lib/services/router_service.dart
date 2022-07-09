@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wiet_corp/models/cat.dart';
 import 'package:wiet_corp/pages/grid_page.dart';
 import 'package:wiet_corp/pages/information_page.dart';
 import 'package:wiet_corp/utilities/routes.dart';
@@ -12,7 +13,9 @@ class RouterService {
         );
       case INFORMATION_PAGE:
         return MaterialPageRoute(
-          builder: (_) => const InformationPage(),
+          builder: (_) => InformationPage(
+            cat: settings.arguments as Cat,
+          ),
         );
       default:
         return MaterialPageRoute(
